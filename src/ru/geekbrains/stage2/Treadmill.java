@@ -1,9 +1,10 @@
 package ru.geekbrains.stage2;
 
-public class Treadmill implements IObstacles{
+public class Treadmill implements IObstacles {
 
-    private int length;
-    Treadmill (int length) {
+    private final int length;
+
+    Treadmill(int length) {
         this.length = length;
     }
 

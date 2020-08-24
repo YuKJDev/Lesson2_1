@@ -1,9 +1,10 @@
 package ru.geekbrains.stage2;
 
-public class Wall implements IObstacles{
+public class Wall implements IObstacles {
 
-   private int height;
-    Wall (int height) {
+    private int height;
+
+    Wall(int height) {
         this.height = height;
     }
 

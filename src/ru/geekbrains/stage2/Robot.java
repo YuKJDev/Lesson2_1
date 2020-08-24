@@ -1,6 +1,14 @@
 package ru.geekbrains.stage2;
 
 public class Robot implements IActions {
+    private boolean isMove;
+    private boolean isJump;
+
+    public Robot(boolean isMove, boolean isJump) {
+        this.isMove = isMove;
+        this.isJump = isJump;
+    }
+
     @Override
     public boolean isMove() {
         return isMove;
@@ -9,15 +17,6 @@ public class Robot implements IActions {
     @Override
     public boolean isJump() {
         return isJump;
-    }
-
-    private boolean isMove;
-    private boolean isJump;
-
-
-    public Robot(boolean isMove, boolean isJump) {
-        this.isMove = isMove;
-        this.isJump = isJump;
     }
 
     @Override

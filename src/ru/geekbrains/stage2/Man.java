@@ -1,9 +1,15 @@
 package ru.geekbrains.stage2;
 
-public class Man implements IActions{
+public class Man implements IActions {
     private boolean isMove;
     private boolean isJump;
     private int length;
+
+    public Man(boolean isMove, boolean isJump) {
+        this.isMove = isMove;
+        this.isJump = isJump;
+
+    }
 
     public boolean isMove() {
         return isMove;
@@ -11,15 +17,6 @@ public class Man implements IActions{
 
     public boolean isJump() {
         return isJump;
-    }
-
-
-
-
-   public Man(boolean isMove, boolean isJump) {
-        this.isMove = isMove;
-        this.isJump = isJump;
-
     }
 
     @Override
@@ -45,8 +42,8 @@ public class Man implements IActions{
     public void doJump(int height) {
         int MAX_JUMP = 1;
         if (isMove) {
-         if (height >= 0 && height <= MAX_JUMP) {
-                System.out.println("Человек успешно перепрыгнул через стену " + height + " м." );
+            if (height >= 0 && height <= MAX_JUMP) {
+                System.out.println("Человек успешно перепрыгнул через стену " + height + " м.");
                 isJump = true;
             } else {
                 System.out.println("Человек  не смог перепрыгнуть через стену " + height + " м.");
