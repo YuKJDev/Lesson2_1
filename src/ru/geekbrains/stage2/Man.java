@@ -41,6 +41,7 @@ public class Man implements IActions {
     @Override
     public void doJump(int height) {
         int MAX_JUMP = 1;
+
         if (isMove) {
             if (height >= 0 && height <= MAX_JUMP) {
                 System.out.println("Человек успешно перепрыгнул через стену " + height + " м.");

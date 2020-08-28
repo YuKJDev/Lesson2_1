@@ -1,8 +1,14 @@
 package ru.geekbrains.stage2;
 
-public class Cat implements IActions{
+public class Cat implements IActions {
     private boolean isMove;
     private boolean isJump;
+
+    public Cat(boolean isMove, boolean isJump) {
+        this.isMove = isMove;
+        this.isJump = isJump;
+    }
+
     @Override
     public boolean isMove() {
         return isMove;
@@ -13,17 +19,12 @@ public class Cat implements IActions{
         return isJump;
     }
 
-     public Cat(boolean isMove, boolean isJump) {
-        this.isMove = isMove;
-        this.isJump = isJump;
-    }
-
-
     @Override
     public void doMove(int length) {
         int MAX_MOVE = 500;
         if (isJump) {
             if (length >= 1 && length <= MAX_MOVE) {
+
                 System.out.println("Кот успешно пробежал дистанцию " + length + " м.");
                 isMove = true;
             } else {
