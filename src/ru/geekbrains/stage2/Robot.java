@@ -38,7 +38,7 @@ public class Robot implements IActions {
     public void doJump(int height) {
         if (isMove) {
             int MAX_JUMP = 2;
-            if (height >= 0 && height <= MAX_JUMP) {
+            if (height >= 1 && height <= MAX_JUMP) {
                 System.out.println("Робот успешно перепрыгнул через стену " + height + " м.");
                 isJump = true;
             } else {
